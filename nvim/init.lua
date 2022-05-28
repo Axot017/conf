@@ -1,1 +1,1 @@
-require "config/options"
+require "parts/options"
