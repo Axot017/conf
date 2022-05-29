@@ -4,4 +4,4 @@ require "parts/plugins"
 require "parts/colorscheme"
 require "parts/completion"
 require "parts/lsp"
-
+require "parts/autosave"

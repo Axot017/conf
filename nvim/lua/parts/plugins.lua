@@ -4,11 +4,12 @@ function bootstrap_packer()
   end
 end
 
-function install_plugins(use) 
+function install_plugins(use)
   use "wbthomason/packer.nvim"
   use "nvim-lua/popup.nvim"
   use "nvim-lua/plenary.nvim"
   use "lunarvim/colorschemes"
+  use "Pocco81/AutoSave.nvim"
 
   -- cmp
   use "hrsh7th/nvim-cmp"
