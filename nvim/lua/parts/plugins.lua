@@ -10,15 +10,22 @@ function install_plugins(use)
   use "nvim-lua/plenary.nvim"
   use "lunarvim/colorschemes"
 
+  -- cmp
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-cmdline"
   use "hrsh7th/cmp-nvim-lua"
   use "saadparwaiz1/cmp_luasnip"
+  use "hrsh7th/cmp-nvim-lsp"
 
+  -- snippets
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
+
+  -- LSP
+  use "neovim/nvim-lspconfig"
+  use "williamboman/nvim-lsp-installer"
 
   bootstrap_packer()
 end
@@ -50,6 +57,7 @@ vim.cmd [[
 
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
+  vim.notify("packer not installed")
   return
 end
 

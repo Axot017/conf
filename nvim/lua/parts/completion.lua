@@ -1,10 +1,12 @@
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
+  vim.notify("cmp not installed")
   return
 end
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 if not snip_status_ok then
+  vim.notify("luasnip not installed")
   return
 end
 
@@ -42,7 +44,6 @@ local kind_icons = {
   Operator = "",
   TypeParameter = "",
 }
-
 
 cmp.setup {
   snippet = {
@@ -96,6 +97,8 @@ cmp.setup {
     format = function(entry, vim_item)
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
       vim_item.menu = ({
+        nvim_lsp = "[LSP]",
+        nvim_lua = "[NVIM_LUA]",
         luasnip = "[Snippet]",
         buffer = "[File]",
         path = "[Path]",
@@ -104,10 +107,11 @@ cmp.setup {
     end,
   },
   sources = {
+    { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
-    { name = "nvim_lua" },
+    { name = "nvim_lua" }
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
@@ -117,3 +121,4 @@ cmp.setup {
     documentation = cmp.config.window.bordered()
   },
 }
+
