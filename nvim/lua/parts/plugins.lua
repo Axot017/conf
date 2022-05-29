@@ -31,6 +31,13 @@ local function install_plugins(use)
   -- Telescope
   use "nvim-telescope/telescope.nvim"
 
+  -- Treesitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+  }
+  use "p00f/nvim-ts-rainbow"
+
   bootstrap_packer()
 end
 
