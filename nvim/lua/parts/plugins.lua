@@ -1,14 +1,15 @@
-function bootstrap_packer()
+local function bootstrap_packer()
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
 end
 
-function install_plugins(use) 
+local function install_plugins(use)
   use "wbthomason/packer.nvim"
   use "nvim-lua/popup.nvim"
   use "nvim-lua/plenary.nvim"
   use "lunarvim/colorschemes"
+  use "Pocco81/AutoSave.nvim"
 
   -- cmp
   use "hrsh7th/nvim-cmp"
@@ -26,6 +27,9 @@ function install_plugins(use)
   -- LSP
   use "neovim/nvim-lspconfig"
   use "williamboman/nvim-lsp-installer"
+
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
 
   bootstrap_packer()
 end
