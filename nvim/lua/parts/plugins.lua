@@ -11,6 +11,7 @@ local function install_plugins(use)
   use "lunarvim/colorschemes"
   use "Pocco81/AutoSave.nvim"
   use "windwp/nvim-autopairs"
+  use "numToStr/Comment.nvim"
 
   -- cmp
   use "hrsh7th/nvim-cmp"
