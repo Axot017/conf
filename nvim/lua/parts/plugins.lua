@@ -41,6 +41,10 @@ local function install_plugins(use)
   }
   use "p00f/nvim-ts-rainbow"
 
+  -- Nvim tree
+  use 'kyazdani42/nvim-web-devicons'
+  use 'kyazdani42/nvim-tree.lua'
+
   bootstrap_packer()
 end
 
