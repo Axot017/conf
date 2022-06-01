@@ -10,6 +10,7 @@ local function install_plugins(use)
   use "nvim-lua/plenary.nvim"
   use "lunarvim/colorschemes"
   use "Pocco81/AutoSave.nvim"
+  use "windwp/nvim-autopairs"
 
   -- cmp
   use "hrsh7th/nvim-cmp"
