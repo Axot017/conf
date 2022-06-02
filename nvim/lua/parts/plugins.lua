@@ -11,6 +11,8 @@ local function install_plugins(use)
   use "lunarvim/colorschemes"
   use "Pocco81/AutoSave.nvim"
   use "windwp/nvim-autopairs"
+  use "numToStr/Comment.nvim"
+  use "lewis6991/gitsigns.nvim"
 
   -- cmp
   use "hrsh7th/nvim-cmp"
@@ -38,6 +40,10 @@ local function install_plugins(use)
     run = ':TSUpdate',
   }
   use "p00f/nvim-ts-rainbow"
+
+  -- Nvim tree
+  use 'kyazdani42/nvim-web-devicons'
+  use 'kyazdani42/nvim-tree.lua'
 
   bootstrap_packer()
 end
