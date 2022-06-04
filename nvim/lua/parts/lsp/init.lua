@@ -6,4 +6,5 @@ end
 
 require("parts.lsp.lsp-installer")
 require("parts.lsp.setup").setup()
+require("parts.lsp.nullls")
 

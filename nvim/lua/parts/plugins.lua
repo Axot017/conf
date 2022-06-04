@@ -13,6 +13,7 @@ local function install_plugins(use)
   use "windwp/nvim-autopairs"
   use "numToStr/Comment.nvim"
   use "lewis6991/gitsigns.nvim"
+  use "jose-elias-alvarez/null-ls.nvim"
 
   -- cmp
   use "hrsh7th/nvim-cmp"
