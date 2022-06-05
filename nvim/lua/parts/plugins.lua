@@ -17,6 +17,7 @@ local function install_plugins(use)
   use 'akinsho/flutter-tools.nvim'
   use 'mfussenegger/nvim-dap'
   use 'nvim-lualine/lualine.nvim'
+  use 'akinsho/toggleterm.nvim'
 
   -- cmp
   use "hrsh7th/nvim-cmp"
