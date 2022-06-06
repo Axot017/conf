@@ -18,6 +18,10 @@ local function install_plugins(use)
   use 'mfussenegger/nvim-dap'
   use 'nvim-lualine/lualine.nvim'
   use 'akinsho/toggleterm.nvim'
+  use 'ahmedkhalf/project.nvim'
+  use 'lewis6991/impatient.nvim'
+  use "ur4ltz/surround.nvim"
+  use 'rcarriga/nvim-notify'
 
   -- cmp
   use "hrsh7th/nvim-cmp"
