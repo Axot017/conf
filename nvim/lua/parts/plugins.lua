@@ -22,6 +22,8 @@ local function install_plugins(use)
   use 'lewis6991/impatient.nvim'
   use "ur4ltz/surround.nvim"
   use 'rcarriga/nvim-notify'
+  use 'goolord/alpha-nvim'
+  use "antoinemadec/FixCursorHold.nvim"
 
   -- cmp
   use "hrsh7th/nvim-cmp"
