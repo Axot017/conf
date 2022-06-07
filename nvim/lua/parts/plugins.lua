@@ -15,7 +15,6 @@ local function install_plugins(use)
   use "lewis6991/gitsigns.nvim"
   use "jose-elias-alvarez/null-ls.nvim"
   use 'akinsho/flutter-tools.nvim'
-  use 'mfussenegger/nvim-dap'
   use 'nvim-lualine/lualine.nvim'
   use 'akinsho/toggleterm.nvim'
   use 'ahmedkhalf/project.nvim'
@@ -59,6 +58,9 @@ local function install_plugins(use)
   -- Bufferline
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
+  -- dap
+  use 'mfussenegger/nvim-dap'
+  use "rcarriga/nvim-dap-ui"
 
   bootstrap_packer()
 end
