@@ -22,7 +22,7 @@ flutter.setup {
     enabled = true,
     run_via_dap = true, -- use dap instead of a plenary job to run flutter apps
     register_configurations = function(_)
-      -- require("dap").configurations.dart = {}
+      require("dap").configurations.dart = {}
       require("dap.ext.vscode").load_launchjs()
     end,
   },

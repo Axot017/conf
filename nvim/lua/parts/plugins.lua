@@ -23,6 +23,7 @@ local function install_plugins(use)
   use 'rcarriga/nvim-notify'
   use 'goolord/alpha-nvim'
   use "antoinemadec/FixCursorHold.nvim"
+  use "simrat39/rust-tools.nvim"
 
   -- cmp
   use "hrsh7th/nvim-cmp"
