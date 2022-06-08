@@ -19,14 +19,14 @@ flutter.setup {
     }
   },
   debugger = { -- integrate with nvim dap + install dart code debugger
-    enabled = false,
-    run_via_dap = false, -- use dap instead of a plenary job to run flutter apps
+    enabled = true,
+    run_via_dap = true, -- use dap instead of a plenary job to run flutter apps
     register_configurations = function(_)
-      require("dap").configurations.dart = {}
+      -- require("dap").configurations.dart = {}
       require("dap.ext.vscode").load_launchjs()
     end,
   },
-  flutter_path = "<full/path/if/needed>", -- <-- this takes priority over the lookup
+  flutter_path = nil, -- <-- this takes priority over the lookup
   flutter_lookup_cmd = nil, -- example "dirname $(which flutter)" or "asdf where flutter"
   fvm = true, -- takes priority over path, uses <workspace>/.fvm/flutter_sdk if enabled
   widget_guides = {
@@ -34,7 +34,7 @@ flutter.setup {
   },
   closing_tags = {
     highlight = "ErrorMsg", -- highlight for the closing tag
-    prefix = ">", -- character to use for close tag e.g. > Widget
+    prefix = "> ", -- character to use for close tag e.g. > Widget
     enabled = true -- set to false to disable
   },
   dev_log = {
@@ -61,7 +61,7 @@ flutter.setup {
     settings = {
       showTodos = true,
       completeFunctionCalls = true,
-      analysisExcludedFolders = {"<path-to-flutter-sdk-packages>"},
+      analysisExcludedFolders = { "" },
       renameFilesWithClasses = "prompt",
       enableSnippets = true,
     }
