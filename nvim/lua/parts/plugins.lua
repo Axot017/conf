@@ -4,7 +4,7 @@ local function bootstrap_packer()
   end
 end
 
-local function install_plugins(use)
+local function install_plugins(use, use_rocks)
   use "wbthomason/packer.nvim"
   use "nvim-lua/popup.nvim"
   use "nvim-lua/plenary.nvim"
@@ -23,6 +23,7 @@ local function install_plugins(use)
   use 'rcarriga/nvim-notify'
   use 'goolord/alpha-nvim'
   use "antoinemadec/FixCursorHold.nvim"
+  use "simrat39/rust-tools.nvim"
 
   -- cmp
   use "hrsh7th/nvim-cmp"
@@ -58,9 +59,13 @@ local function install_plugins(use)
   -- Bufferline
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
+
   -- dap
   use 'mfussenegger/nvim-dap'
   use "rcarriga/nvim-dap-ui"
+
+  use_rocks "lunajson"
+  use_rocks "inspect"
 
   bootstrap_packer()
 end
