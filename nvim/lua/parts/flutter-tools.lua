@@ -22,8 +22,8 @@ flutter.setup {
     enabled = true,
     run_via_dap = true, -- use dap instead of a plenary job to run flutter apps
     register_configurations = function(_)
-      require("dap").configurations.dart = {}
-      require("dap.ext.vscode").load_launchjs()
+      local config = require("parts.config-reader").read_config()
+      require("dap").configurations.dart = config
     end,
   },
   flutter_path = nil, -- <-- this takes priority over the lookup
