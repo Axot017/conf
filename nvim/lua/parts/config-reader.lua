@@ -47,9 +47,16 @@ local function read_config()
     for k, v in pairs(config) do
       new[k] = v
     end
+
+    for k, v in pairs(new) do
+      if type(v) == 'string' then
+        new[k] = string.gsub(v, "${project_dir}", root)
+      else
+        new[k] = v
+      end
+    end
     result[index] = new
   end
-  vim.notify(require('inspect')(result))
 
   return result
 end
