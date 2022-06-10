@@ -64,6 +64,7 @@ flutter.setup {
       analysisExcludedFolders = { "" },
       renameFilesWithClasses = "prompt",
       enableSnippets = true,
+      lineLength = 120,
     }
   }
 }
