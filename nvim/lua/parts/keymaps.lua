@@ -64,8 +64,10 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope
-keymap("n", "<C-p>", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<C-f>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<Leader>f", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<Leader>/", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "gi", "<cmd>Telescope lsp_implementations<cr>", opts)
+keymap("n", "gr", "<cmd>Telescope lsp_references<cr>", opts)
 
 keymap("n", "<F4>", ":lua require('dapui').toggle()<CR>", opts)
 keymap("n", "<F6>", ":lua require('dap').toggle_breakpoint()<CR>", opts)

@@ -9,21 +9,20 @@ local function install_plugins(use, use_rocks)
   use "nvim-lua/popup.nvim"
   use "nvim-lua/plenary.nvim"
   use "lunarvim/colorschemes"
-  use "Pocco81/AutoSave.nvim"
   use "windwp/nvim-autopairs"
   use "numToStr/Comment.nvim"
   use "lewis6991/gitsigns.nvim"
-  use "jose-elias-alvarez/null-ls.nvim"
   use 'akinsho/flutter-tools.nvim'
   use 'nvim-lualine/lualine.nvim'
-  use 'akinsho/toggleterm.nvim'
   use 'ahmedkhalf/project.nvim'
   use 'lewis6991/impatient.nvim'
-  use "ur4ltz/surround.nvim"
   use 'rcarriga/nvim-notify'
   use 'goolord/alpha-nvim'
   use "antoinemadec/FixCursorHold.nvim"
   use "simrat39/rust-tools.nvim"
+  use "moll/vim-bbye"
+  use 'folke/tokyonight.nvim'
+  use 'tpope/vim-surround'
 
   -- cmp
   use "hrsh7th/nvim-cmp"
@@ -55,10 +54,6 @@ local function install_plugins(use, use_rocks)
   -- Nvim tree
   use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
-
-  -- Bufferline
-  use "akinsho/bufferline.nvim"
-  use "moll/vim-bbye"
 
   -- dap
   use 'mfussenegger/nvim-dap'
