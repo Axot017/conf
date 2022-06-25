@@ -42,4 +42,9 @@ for key, value in pairs(options) do
 end
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[ set nomodeline]]
+vim.cmd [[ set nomodeline ]]
+
+vim.cmd [[command! BufferDeleteOther execute "%bd | e# | bd#"]]
+vim.cmd [[cnoreabbrev bdo BufferDeleteOther]]
+vim.cmd [[command! BufferDeleteAll execute "%bd"]]
+vim.cmd [[cnoreabbrev bda BufferDeleteAll]]

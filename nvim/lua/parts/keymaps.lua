@@ -66,6 +66,7 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- Telescope
 keymap("n", "<Leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<Leader>/", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<Leader>b", "<cmd>Telescope buffers<cr>", opts)
 keymap("n", "gi", "<cmd>Telescope lsp_implementations<cr>", opts)
 keymap("n", "gr", "<cmd>Telescope lsp_references<cr>", opts)
 
