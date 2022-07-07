@@ -22,3 +22,4 @@ if [ -f '/Users/mledwon/google-cloud-sdk/path.fish.inc' ]; . '/Users/mledwon/goo
 
 export GOOGLE_APPLICATION_CREDENTIALS="/Users/mledwon/gcloud.json"
 export JAVA_HOME="/opt/homebrew/opt/openjdk/bin"
+thefuck --alias | source 
