@@ -23,6 +23,8 @@ local function install_plugins(use, use_rocks)
   use "moll/vim-bbye"
   use 'folke/tokyonight.nvim'
   use 'tpope/vim-surround'
+  use 'weilbith/nvim-code-action-menu'
+  use 'folke/trouble.nvim'
 
   -- cmp
   use "hrsh7th/nvim-cmp"

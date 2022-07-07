@@ -2,10 +2,10 @@ local M = {}
 
 M.setup = function()
   local signs = {
-    { name = "DiagnosticSignError", text = "" },
-    { name = "DiagnosticSignWarn", text = "" },
+    { name = "DiagnosticSignError", text = "" },
+    { name = "DiagnosticSignWarn", text = "" },
     { name = "DiagnosticSignHint", text = "כֿ" },
-    { name = "DiagnosticSignInfo", text = "" },
+    { name = "DiagnosticSignInfo", text = "" },
   }
 
   for _, sign in ipairs(signs) do
@@ -13,7 +13,7 @@ M.setup = function()
   end
 
   local config = {
-    virtual_text = false,
+    virtual_text = true,
     signs = {
       active = signs,
     },
@@ -37,12 +37,12 @@ local function lsp_highlight_document(client)
   if client.resolved_capabilities.document_highlight then
     vim.api.nvim_exec(
       [[
-      augroup lsp_document_highlight
-        autocmd! * <buffer>
-        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-      augroup END
-    ]] ,
+        augroup lsp_document_highlight
+          autocmd! * <buffer>
+          autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+          autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+        augroup END
+      ]],
       false
     )
   end
@@ -56,12 +56,12 @@ local function lsp_keymaps(bufnr)
   vim.keymap.set("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
   vim.keymap.set('n', 'gy', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
   vim.keymap.set("n", "<Leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-  vim.keymap.set("n", "<Leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+  vim.keymap.set("n", "<Leader>a", "<cmd>CodeActionMenu<CR>", opts)
   vim.keymap.set("n", "gf", "<cmd>lua vim.lsp.buf.formatting_sync()<CR>", opts)
   vim.keymap.set("n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
   vim.keymap.set(
     "n",
-    "<Leader>d",
+    "<Leader>ld",
     '<cmd>lua vim.diagnostic.open_float(0, { border = "rounded" })<CR>',
     opts
   )

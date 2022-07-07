@@ -6,7 +6,7 @@ if not status_ok then
 end
 
 configs.setup {
-  ensure_installed = "all",
+  ensure_installed = { "rust", "bash", "dart", "comment", "dockerfile", "lua", "toml", "yaml" },
   sync_install = false,
   ignore_install = { "phpdoc" },
   autopairs = {

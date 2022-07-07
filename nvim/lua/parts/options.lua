@@ -44,8 +44,8 @@ end
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[ set nomodeline ]]
 
-vim.cmd [[command! BufferDeleteOther execute "%bd | e# | bd#"]]
+vim.cmd [[command! BufferDeleteOther execute "%Bd | e# | Bd#"]]
 vim.cmd [[cnoreabbrev bdo BufferDeleteOther]]
-vim.cmd [[command! BufferDeleteAll execute "%bd"]]
+vim.cmd [[command! BufferDeleteAll execute "%Bd"]]
 vim.cmd [[cnoreabbrev bda BufferDeleteAll]]
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
