@@ -13,6 +13,7 @@ local function install_plugins(use, use_rocks)
   use { "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb"}
   use { "windwp/nvim-autopairs", commit = "972a7977e759733dd6721af7bcda7a67e40c010e" }
   use { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }
+  use { "numToStr/Comment.nvim", commit = "2e0572cc35ecc117c0ab6dc0aa3132b109d61047"}
 
   use { "hrsh7th/nvim-cmp", commit = "c4dcb1244a8942b8d2bd3c0a441481e12f91cdf1" }
   use { "hrsh7th/cmp-buffer", commit = "62fc67a2b0205136bc3e312664624ba2ab4a9323" }
