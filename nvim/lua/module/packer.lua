@@ -8,6 +8,7 @@ local function install_plugins(use, use_rocks)
   use { "wbthomason/packer.nvim", commit = "4dedd3b08f8c6e3f84afbce0c23b66320cd2a8f2" }
   use { "nvim-lua/popup.nvim", commit = "b7404d35d5d3548a82149238289fa71f7f6de4ac" }
   use { "nvim-lua/plenary.nvim", commit = "2de0ff7afd4ae49b9706599b5773876025469127" }
+  use { "nvim-telescope/telescope.nvim", commit = "8c563017200bebd76153feb1046ecdf2db26c9d4" }
 
   bootstrap_packer()
 end
