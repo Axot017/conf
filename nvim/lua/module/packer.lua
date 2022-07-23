@@ -19,7 +19,7 @@ local function install_plugins(use, use_rocks)
   use { "numToStr/Comment.nvim", commit = "2e0572cc35ecc117c0ab6dc0aa3132b109d61047" }
   use { 'lewis6991/gitsigns.nvim', commit = "4883988cf8b623f63cc8c7d3f11b18b7e81f06ff" }
   use { 'nvim-lualine/lualine.nvim', commit = "5f68f070e4f7158517afc55f125a6f5ed1f7db47" }
-
+  use { 'akinsho/bufferline.nvim', commit = "bf9eb696c2f640c812374f5eead740b189adcccf" }
 
   use { "hrsh7th/nvim-cmp", commit = "c4dcb1244a8942b8d2bd3c0a441481e12f91cdf1" }
   use { "hrsh7th/cmp-buffer", commit = "62fc67a2b0205136bc3e312664624ba2ab4a9323" }

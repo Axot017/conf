@@ -1,7 +1,7 @@
 local status_ok, lspconfig = pcall(require, "lspconfig")
 if not status_ok then
   vim.notify("lspconfig not installed")
-	return
+  return
 end
 
 local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
@@ -16,8 +16,8 @@ if not status_ok then
   return
 end
 
-local function setup() 
-    local signs = {
+local function setup()
+  local signs = {
     { name = "DiagnosticSignError", text = "" },
     { name = "DiagnosticSignWarn", text = "" },
     { name = "DiagnosticSignHint", text = "כֿ" },
@@ -82,7 +82,6 @@ local function lsp_keymaps(bufnr)
     opts
   )
   vim.keymap.set("n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
-  vim.keymap.set("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
   vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 end
 
