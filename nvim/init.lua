@@ -1,5 +1,6 @@
-require "module.options"
 require "module.packer"
+require "module.impatient"
+require "module.options"
 require "module.telescope"
 require "module.keymaps"
 require "module.treesitter"
