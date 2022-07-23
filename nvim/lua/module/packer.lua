@@ -12,6 +12,13 @@ local function install_plugins(use, use_rocks)
   use { "nvim-treesitter/nvim-treesitter", commit = "783c74cefc21eda9602acc3f50409432c95c76b8" }
   use { "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb"}
 
+  use { "hrsh7th/nvim-cmp", commit = "c4dcb1244a8942b8d2bd3c0a441481e12f91cdf1" }
+  use { "hrsh7th/cmp-buffer", commit = "62fc67a2b0205136bc3e312664624ba2ab4a9323" }
+  use { "hrsh7th/cmp-path", commit = "981baf9525257ac3269e1b6701e376d6fbff6921" }
+  use { "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" }
+  use { "hrsh7th/cmp-cmdline", commit = "c36ca4bc1dedb12b4ba6546b96c43896fd6e7252" }
+  use { "L3MON4D3/LuaSnip", commit = "be3083bbb8ebc21671bf7c91c27f043ebe0a8d8d" }
+
   bootstrap_packer()
 end
 
