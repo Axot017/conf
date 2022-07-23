@@ -10,6 +10,7 @@ local function install_plugins(use, use_rocks)
   use { "nvim-lua/plenary.nvim", commit = "2de0ff7afd4ae49b9706599b5773876025469127" }
   use { "nvim-telescope/telescope.nvim", commit = "8c563017200bebd76153feb1046ecdf2db26c9d4" }
   use { "nvim-treesitter/nvim-treesitter", commit = "783c74cefc21eda9602acc3f50409432c95c76b8" }
+  use { "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb"}
 
   bootstrap_packer()
 end
