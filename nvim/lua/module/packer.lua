@@ -20,6 +20,8 @@ local function install_plugins(use, use_rocks)
   use { 'lewis6991/gitsigns.nvim', commit = "4883988cf8b623f63cc8c7d3f11b18b7e81f06ff" }
   use { 'nvim-lualine/lualine.nvim', commit = "5f68f070e4f7158517afc55f125a6f5ed1f7db47" }
   use { 'akinsho/bufferline.nvim', commit = "bf9eb696c2f640c812374f5eead740b189adcccf" }
+  use { "kyazdani42/nvim-web-devicons", commit = "2d02a56189e2bde11edd4712fea16f08a6656944" }
+  use { "kyazdani42/nvim-tree.lua", commit = "d927e89aa9b8a88dba5c58bfbf67586de01ed8dd" }
 
   use { "hrsh7th/nvim-cmp", commit = "c4dcb1244a8942b8d2bd3c0a441481e12f91cdf1" }
   use { "hrsh7th/cmp-buffer", commit = "62fc67a2b0205136bc3e312664624ba2ab4a9323" }
