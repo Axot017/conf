@@ -1,6 +1,22 @@
-local M = {}
+local status_ok, lspconfig = pcall(require, "lspconfig")
+if not status_ok then
+  vim.notify("lspconfig not installed")
+  return
+end
 
-M.setup = function()
+local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
+if not status_ok then
+  vim.notify("nvim-lsp-installer not installed")
+  return
+end
+
+local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+if not status_ok then
+  vim.notify("cmp_nvim_lsp not installed")
+  return
+end
+
+local function setup()
   local signs = {
     { name = "DiagnosticSignError", text = "" },
     { name = "DiagnosticSignWarn", text = "" },
@@ -66,23 +82,22 @@ local function lsp_keymaps(bufnr)
     opts
   )
   vim.keymap.set("n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
-  vim.keymap.set("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
   vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 end
 
-M.on_attach = function(client, bufnr)
+local function on_attach(client, bufnr)
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
+local capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-if not status_ok then
-  vim.notify("cmp_nvim_lsp not installed")
-  return
+local function setup_config(server)
+  local opts = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
+  server:setup(opts)
 end
 
-M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
-
-return M
+lsp_installer.on_server_ready(setup_config)

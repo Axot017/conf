@@ -83,3 +83,6 @@ keymap("n", "<Leader>di", ":lua require('dapui').toggle()<CR>", opts)
 
 keymap("n", "<Leader>tw", "<cmd>TroubleToggle workspace_diagnostics<CR>", opts)
 keymap("n", "<Leader>td", "<cmd>TroubleToggle document_diagnostics<CR>", opts)
+
+keymap("", "<Leader>q", "<Nop>", opts)
+keymap("n", "<Leader>q", "<cmd>:Bd<CR>", opts)
