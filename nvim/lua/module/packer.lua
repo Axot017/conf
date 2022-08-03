@@ -23,6 +23,7 @@ local function install_plugins(use, use_rocks)
   use { "kyazdani42/nvim-web-devicons", commit = "2d02a56189e2bde11edd4712fea16f08a6656944" }
   use { "kyazdani42/nvim-tree.lua", commit = "d927e89aa9b8a88dba5c58bfbf67586de01ed8dd" }
   use { "folke/trouble.nvim", commit = "da61737d860ddc12f78e638152834487eabf0ee5" }
+  use { "akinsho/toggleterm.nvim", commit = "1a8b330d3da8b5ee3d726cdc1797ac83ef84b695" }
 
   use { "hrsh7th/nvim-cmp", commit = "c4dcb1244a8942b8d2bd3c0a441481e12f91cdf1" }
   use { "hrsh7th/cmp-buffer", commit = "62fc67a2b0205136bc3e312664624ba2ab4a9323" }
