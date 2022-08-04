@@ -5,7 +5,7 @@ end
 
 toggleterm.setup({
   size = 20,
-  open_mapping = [[<Leader>t]],
+  open_mapping = [[<C-/>]],
   hide_numbers = true,
   shade_filetypes = {},
   shade_terminals = true,
@@ -15,7 +15,7 @@ toggleterm.setup({
   persist_size = true,
   direction = "float",
   close_on_exit = true,
-  shell = vim.o.shell,
+  shell = "/opt/homebrew/bin/fish",
   float_opts = {
     border = "curved",
     winblend = 0,
