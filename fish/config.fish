@@ -17,7 +17,7 @@ if status is-interactive
 
 
     export GOOGLE_APPLICATION_CREDENTIALS="/Users/mledwon/gcloud.json"
-    export JAVA_HOME="/opt/homebrew/opt/openjdk/bin"
+    export JAVA_HOME="/opt/homebrew/Cellar/openjdk/18.0.2"
     thefuck --alias | source 
 end
 
