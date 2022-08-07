@@ -25,6 +25,7 @@ local function install_plugins(use, use_rocks)
   use { "folke/trouble.nvim", commit = "da61737d860ddc12f78e638152834487eabf0ee5" }
   use { "akinsho/toggleterm.nvim", commit = "1a8b330d3da8b5ee3d726cdc1797ac83ef84b695" }
   use { "mfussenegger/nvim-dap", commit = "c0f43f43b3093c9716b338925b50c8c36eb72f24" }
+  use { "rcarriga/nvim-dap-ui", commit = "225115ae986b39fdaffaf715e571dd43b3ac9670" }
 
   use { "hrsh7th/nvim-cmp", commit = "c4dcb1244a8942b8d2bd3c0a441481e12f91cdf1" }
   use { "hrsh7th/cmp-buffer", commit = "62fc67a2b0205136bc3e312664624ba2ab4a9323" }
