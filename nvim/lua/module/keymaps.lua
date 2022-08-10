@@ -24,10 +24,10 @@ keymap("n", "<S-l>", "<C-w>l", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- Resize with arrows
-keymap("n", "<M-=>", ":resize +2<CR>", opts)
-keymap("n", "<M-->", ":resize -2<CR>", opts)
-keymap("n", "<S-->", ":vertical resize -2<CR>", opts)
-keymap("n", "<S-=>", ":vertical resize +2<CR>", opts)
+keymap("n", "<S-Up>", "<cmd>resize +2<CR>", opts)
+keymap("n", "<S-Down>", "<cmd>resize -2<CR>", opts)
+keymap("n", "<S-Left>", "<cmd>vertical resize -2<CR>", opts)
+keymap("n", "<S-Right>", "<cmd>vertical resize +2<CR>", opts)
 
 keymap("n", "<Leader>q", ":Bdelete<CR>", opts)
 

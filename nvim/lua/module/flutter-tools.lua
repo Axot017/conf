@@ -14,7 +14,7 @@ ft.setup {
   },
   debugger = {
     enabled = true,
-    run_via_dap = false,
+    run_via_dap = true,
     register_configurations = function(_)
       require("dap").configurations.dart = {}
       require("dap.ext.vscode").load_launchjs()
