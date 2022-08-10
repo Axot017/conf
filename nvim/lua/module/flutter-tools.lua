@@ -15,6 +15,25 @@ ft.setup {
   debugger = {
     enabled = true,
     run_via_dap = true,
+    layouts = {
+      {
+        elements = {
+          { id = "scopes", size = 0.25 },
+          "breakpoints",
+          "stacks",
+          "watches",
+        },
+        size = 40, -- 40 columns
+        position = "left",
+      },
+      {
+        elements = {
+          "repl",
+        },
+        size = 0.25, -- 25% of total lines
+        position = "bottom",
+      },
+    },
     register_configurations = function(_)
       require("dap").configurations.dart = {}
       require("dap.ext.vscode").load_launchjs()
