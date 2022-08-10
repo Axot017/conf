@@ -8,6 +8,8 @@ end
 ft.setup {
   fvm = true,
   lsp = {
+    capabilities = require("module.lsp").capabilities,
+    on_attach = require("module.lsp").on_attach,
     settings = {
       lineLength = 120
     }

@@ -16,7 +16,9 @@ if not status_ok then
   return
 end
 
-local function setup()
+local M = {}
+
+M.setup = function()
   local signs = {
     { name = "DiagnosticSignError", text = "" },
     { name = "DiagnosticSignWarn", text = "" },
@@ -85,12 +87,12 @@ local function lsp_keymaps(bufnr)
   vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 end
 
-local function on_attach(client, bufnr)
+M.on_attach = function(client, bufnr)
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
 end
 
-local capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+M.capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local function setup_config(server)
   local opts = {
@@ -102,4 +104,4 @@ end
 
 lsp_installer.on_server_ready(setup_config)
 
-setup()
+return M
