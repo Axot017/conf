@@ -20,10 +20,10 @@ ft.setup {
     layouts = {
       {
         elements = {
-          { id = "scopes", size = 0.25 },
-          "breakpoints",
-          "stacks",
-          "watches",
+          { id = "scopes", size = 0.5 },
+          { id = "stacks", size = 0.25 },
+          { id = "breakpoints", size = 0.15 },
+          { id = "watches", size = 0.1 },
         },
         size = 40, -- 40 columns
         position = "left",
