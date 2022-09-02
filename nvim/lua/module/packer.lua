@@ -28,6 +28,7 @@ local function install_plugins(use, use_rocks)
   use { "rcarriga/nvim-dap-ui", commit = "225115ae986b39fdaffaf715e571dd43b3ac9670" }
   use { "akinsho/flutter-tools.nvim", commit = "89a47278d9d27537735ae4e5e97acfc58ceebf2b" }
   use { "weilbith/nvim-code-action-menu", commit = "a864a79c8e024d4f5d95915210188c9c3430b160", cmd = "CodeActionMenu" }
+  use { "nvim-treesitter/nvim-treesitter-context", commit = "200f9272fdf6c0a239509752fed071fdc63d1190" }
 
   use { "hrsh7th/nvim-cmp", commit = "c4dcb1244a8942b8d2bd3c0a441481e12f91cdf1" }
   use { "hrsh7th/cmp-buffer", commit = "62fc67a2b0205136bc3e312664624ba2ab4a9323" }

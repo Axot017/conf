@@ -96,8 +96,8 @@ M.capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_client_c
 
 local function setup_config(server)
   local opts = {
-    on_attach = on_attach,
-    capabilities = capabilities,
+    on_attach = M.on_attach,
+    capabilities = M.capabilities,
   }
   server:setup(opts)
 end
