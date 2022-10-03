@@ -11,7 +11,7 @@ ft.setup {
     capabilities = require("module.lsp").capabilities,
     on_attach = require("module.lsp").on_attach,
     settings = {
-      lineLength = 120
+      lineLength = 80
     }
   },
   debugger = {
