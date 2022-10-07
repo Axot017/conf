@@ -9,7 +9,10 @@ bufferline.setup {
   options = {
     mode = "buffers", -- set to "tabs" to only show tabpages instead
     numbers = "none",
-    indicator_icon = '▎',
+    indicator = {
+      style = 'icon',
+      icon = '|',
+    },
     modified_icon = '●',
     left_trunc_marker = '',
     right_trunc_marker = '',
