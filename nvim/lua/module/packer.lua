@@ -12,7 +12,7 @@ local function install_plugins(use)
   use { "nvim-treesitter/nvim-treesitter", commit = "a33858d399d0da226b0cf7b45fe9dc8f0a06547b" }
   use { "p00f/nvim-ts-rainbow", commit = "fad8badcd9baa4deb2cf2a5376ab412a1ba41797" }
   use { "lewis6991/impatient.nvim", commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" }
-  use { "folke/tokyonight.nvim", commit = "a950f6215772d3ee8db61720b7bda43551e56c40" }
+  use { "folke/tokyonight.nvim", commit = "393cc9fdcf0918b206a8a8bbb5c7f64a6721ed2f" }
   use { "windwp/nvim-autopairs", commit = "4fc96c8f3df89b6d23e5092d31c866c53a346347" }
   use { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }
   use { "numToStr/Comment.nvim", commit = "a85ca1b96198904e0086eea04580a944e788b7e4" }
