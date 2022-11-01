@@ -31,14 +31,14 @@ M.setup = function()
   end
 
   local config = {
-    virtual_text = true,
-    signs = {
+    virtual_text     = true,
+    signs            = {
       active = signs,
     },
     update_in_insert = true,
-    underline = true,
-    severity_sort = true,
-    float = {
+    underline        = true,
+    severity_sort    = true,
+    float            = {
       focusable = false,
       style = "minimal",
       border = "rounded",
@@ -52,7 +52,7 @@ M.setup = function()
 end
 
 local function lsp_highlight_document(client)
-  if client.server_capabilities.document_highlight then
+  if client.server_capabilities.documentHighlightProvider then
     vim.api.nvim_exec(
       [[
         augroup lsp_document_highlight
