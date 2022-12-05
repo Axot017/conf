@@ -88,3 +88,8 @@ keymap("n", "<Leader>q", "<cmd>:Bd<CR>", opts)
 
 keymap("n", "<C-h>", "<cmd>:bprevious<CR>", opts)
 keymap("n", "<C-l>", "<cmd>:bnext<CR>", opts)
+
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
+keymap("n", "n", "nzz", opts)
+keymap("n", "N", "Nzz", opts)
