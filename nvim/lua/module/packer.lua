@@ -16,7 +16,7 @@ local function install_plugins(use)
   use { "windwp/nvim-autopairs", commit = "4fc96c8f3df89b6d23e5092d31c866c53a346347" }
   use { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }
   use { "numToStr/Comment.nvim", commit = "a85ca1b96198904e0086eea04580a944e788b7e4" }
-  use { 'lewis6991/gitsigns.nvim', commit = "2300e4eadb69a2c01193165e6a522258bbd0e443" }
+  use { 'lewis6991/gitsigns.nvim', commit = "9ff7dfb051e5104088ff80556203634fc8f8546d" }
   use { 'nvim-lualine/lualine.nvim', commit = "edca2b03c724f22bdc310eee1587b1523f31ec7c" }
   use { 'akinsho/bufferline.nvim', commit = "a61991d307e4af75e606aa1241e419d0f532b968" }
   use { "kyazdani42/nvim-web-devicons", commit = "a8cf88cbdb5c58e2b658e179c4b2aa997479b3da" }
