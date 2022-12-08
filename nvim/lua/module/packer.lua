@@ -28,6 +28,7 @@ local function install_plugins(use)
   use { "akinsho/flutter-tools.nvim", commit = "89a47278d9d27537735ae4e5e97acfc58ceebf2b" }
   use { "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu", commit = "a864a79c8e024d4f5d95915210188c9c3430b160" }
   use { "nvim-treesitter/nvim-treesitter-context", commit = "c46a8a0a60412a8fe43aa6bd3a01845c46de6bf2" }
+  use { "github/copilot.vim", commit = "2f4f9259a5c0f927b31c4256cd3e4d7c6df87662" }
 
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" }
   use { "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" }
