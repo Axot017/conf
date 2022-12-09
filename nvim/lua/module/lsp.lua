@@ -75,6 +75,7 @@ local function lsp_keymaps(bufnr)
   vim.keymap.set('n', 'gy', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
   vim.keymap.set("n", "<Leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
   vim.keymap.set("n", "<Leader>a", "<cmd>CodeActionMenu<CR>", opts)
+  vim.keymap.set("v", "<Leader>a", "<cmd>CodeActionMenu<CR>", opts)
   vim.keymap.set("n", "gf", "<cmd>lua vim.lsp.buf.formatting_sync()<CR>", opts)
   vim.keymap.set("n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
   vim.keymap.set(
