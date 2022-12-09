@@ -30,6 +30,7 @@ keymap("n", "<S-Left>", "<cmd>vertical resize -2<CR>", opts)
 keymap("n", "<S-Right>", "<cmd>vertical resize +2<CR>", opts)
 
 keymap("n", "<Leader>q", ":Bdelete<CR>", opts)
+keymap("n", "<Leader><C-q>", ":Bdelete!<CR>", opts)
 
 -- Visual --
 -- Stay in indent mode
