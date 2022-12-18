@@ -1,5 +1,8 @@
 #!/bin/bash
 
+NVIM_DIR="$HOME/.config/nvim"
+ [ ! -d "$NVIM_DIR" ] && git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+
 BASE_DIR=$( dirname -- "$0"; )
 TARGET=".config"
 
