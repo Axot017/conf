@@ -41,6 +41,24 @@ M.lsp_telescope = {
 		["gr"] = { "<cmd>Telescope lsp_references<CR>", "References" },
 		["gd"] = { "<cmd>Telescope lsp_definitions<CR>", "Definitions" },
 		["gi"] = { "<cmd>Telescope lsp_implementations<CR>", "Implementations" },
+		["<leader>fc"] = {
+			function()
+				require("telescope").extensions.flutter.commands()
+			end,
+			"Code actions",
+		},
+		["<leader>dg"] = { "<cmd> Telescope diagnostics <CR>", "Find diagnostics" },
+	},
+}
+
+M.lsp = {
+	n = {
+		["]d"] = {
+			function()
+				vim.diagnostic.goto_next()
+			end,
+			"goto_next",
+		},
 	},
 }
 
@@ -65,7 +83,7 @@ M.nvterm = {
 			"toggle floating term",
 		},
 
-		["<C-t>h"] = {
+		["<C-/>"] = {
 			function()
 				require("nvterm.terminal").toggle("horizontal")
 			end,
@@ -88,7 +106,7 @@ M.nvterm = {
 			"toggle floating term",
 		},
 
-		["<C-t>h"] = {
+		["<C-/>"] = {
 			function()
 				require("nvterm.terminal").toggle("horizontal")
 			end,
