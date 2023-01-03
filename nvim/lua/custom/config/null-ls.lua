@@ -11,7 +11,6 @@ local sources = {
 	b.formatting.rustfmt,
 	b.formatting.dart_format,
 	b.formatting.terraform_fmt,
-	b.formatting.yamlfmt,
 	b.formatting.taplo,
 }
 
