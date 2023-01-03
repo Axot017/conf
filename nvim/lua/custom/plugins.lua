@@ -2,6 +2,15 @@ return {
 	["github/copilot.vim"] = {},
 	["williamboman/mason.nvim"] = {},
 	["williamboman/mason-lspconfig.nvim"] = {},
+	["jackMort/ChatGPT.nvim"] = {
+		after = "telescope.nvim",
+		config = function()
+			require("chatgpt").setup({})
+		end,
+		requires = {
+			"MunifTanjim/nui.nvim",
+		},
+	},
 	["neovim/nvim-lspconfig"] = {
 		config = function()
 			require("plugins.configs.lspconfig")
@@ -27,6 +36,12 @@ return {
 		after = "nvim-dap-ui",
 		config = function()
 			require("custom.config.flutter-tools")
+		end,
+	},
+	["nvim-telescope/telescope-ui-select.nvim"] = {
+		after = "telescope.nvim",
+		config = function()
+			require("telescope").load_extension("ui-select")
 		end,
 	},
 }
