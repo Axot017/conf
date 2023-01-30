@@ -5,4 +5,10 @@ if not status then
 	return
 end
 
-neo_tree.setup({})
+neo_tree.setup({
+	filesystem = {
+		filtered_items = {
+			visible = true,
+		},
+	},
+})
