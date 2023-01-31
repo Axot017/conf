@@ -37,8 +37,8 @@ keymap("n", "<C-n>", "<cmd>NeoTreeRevealToggle<CR>", opts)
 
 keymap("n", "<S-h>", "<Cmd>BufferPrevious<CR>", opts)
 keymap("n", "<S-l>", "<Cmd>BufferNext<CR>", opts)
-keymap("n", "<S-j>", "<Cmd>BufferMovePrevious<CR>", opts)
-keymap("n", "<S-k>", "<Cmd>BufferMoveNext<CR>", opts)
+keymap("n", "<C-,>", "<Cmd>BufferMovePrevious<CR>", opts)
+keymap("n", "<C-.>", "<Cmd>BufferMoveNext<CR>", opts)
 keymap("n", "<leader>x", "<Cmd>BufferClose<CR>", opts)
 
 -- Better window navigation
@@ -77,7 +77,7 @@ keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>",
 keymap("n", "<leader>fc", "<cmd>lua require('telescope').extensions.flutter.commands()<cr>", opts)
 keymap("n", "gi", "<cmd>lua require('telescope.builtin').lsp_implementations()<cr>", opts)
 keymap("n", "gr", "<cmd>lua require('telescope.builtin').lsp_references()<cr>", opts)
-keymap("n", "gd", "<cmd>lua require('telescope.builtin').diagnostics()<cr>", opts)
+keymap("n", "<leader>fd", "<cmd>lua require('telescope.builtin').diagnostics()<cr>", opts)
 
 keymap("n", "<F1>", ":lua require('dapui').toggle()<CR>", opts)
 keymap("n", "<F2>", ":lua require('dap').toggle_breakpoint()<CR>", opts)
