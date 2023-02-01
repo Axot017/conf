@@ -6,5 +6,5 @@ if not status then
 end
 
 bufferline.setup({
-  exclude_name = { "[dap-repl]" },
+  exclude_name = { "[dap-repl]", "__FLUTTER_DEV_LOG__" },
 })

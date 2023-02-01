@@ -132,4 +132,41 @@ require("lazy").setup({
       require("plugins.dressing")
     end,
   },
+  { "antoinemadec/FixCursorHold.nvim" },
+  {
+    "nvim-neotest/neotest",
+    config = function()
+      require("plugins.neotest")
+    end,
+  },
+  {
+    "sidlatau/neotest-dart",
+  },
+  {
+    "rouge8/neotest-rust",
+  },
+  {
+    "nvim-neotest/neotest-plenary",
+  },
+  {
+    "nvim-lualine/lualine.nvim",
+    lazy = false,
+    config = function()
+      require("plugins.lualine")
+    end,
+  },
+  {
+    "akinsho/toggleterm.nvim",
+    config = function()
+      require("plugins.toggleterm")
+    end,
+  },
+  {
+
+    "goolord/alpha-nvim",
+    lazy = false,
+    config = function()
+      require("alpha").setup(require("alpha.themes.dashboard").config)
+    end,
+  },
 }, require("plugins.lazy"))
