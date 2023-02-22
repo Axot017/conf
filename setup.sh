@@ -1,7 +1,6 @@
 #!/bin/bash
 
 BASE_DIR=$( dirname -- "$0"; )
-TARGET=".config"
 
 get_abs_filename() {
   echo "$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"
@@ -14,8 +13,8 @@ do
 	[[ $FILENAME == "setup.sh" ]] && continue
 	[[ $DIR == *".git"* ]] && continue
 
-	TARGET_DIR="$HOME/$TARGET/$DIR"
-	TARGET_FILE="$HOME/$TARGET/$f"
+	TARGET_DIR="$HOME/$DIR"
+	TARGET_FILE="$HOME/$f"
 
 	mkdir -p $TARGET_DIR
 	rm -f $TARGET_FILE
