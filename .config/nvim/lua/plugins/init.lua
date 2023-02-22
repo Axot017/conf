@@ -104,6 +104,7 @@ require("lazy").setup({
     event = "VeryLazy",
     dependencies = {
       "neovim/nvim-lspconfig",
+      "rcarriga/nvim-dap-ui",
     },
     config = function()
       require("plugins.flutter-tools")
