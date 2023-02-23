@@ -14,7 +14,10 @@ function _toggle_lazygit()
 end
 
 function _toggle_fish()
-	if fish_terminal == nil then
+	if lazygit_terminal ~= nil then
+		lazygit_terminal:close()
+		lazygit_terminal = nil
+	elseif fish_terminal == nil then
 		fish_terminal = require("toggleterm.terminal").Terminal:new({ cmd = "fish" })
 		fish_terminal:toggle()
 	else
@@ -30,8 +33,8 @@ function _reset_fish()
 	_toggle_fish()
 end
 
-keymap("n", "<C-S-/>", "<cmd>lua _reset_fish()<cr>", opts)
-keymap("n", "<C-/>", "<cmd>lua _toggle_fish()<cr>", opts)
+keymap("n", "<C-S-t>", "<cmd>lua _reset_fish()<cr>", opts)
+keymap("n", "<C-t>", "<cmd>lua _toggle_fish()<cr>", opts)
 keymap("n", "<leader>lg", "<cmd>lua _toggle_lazygit()<cr>", opts)
 keymap("n", "<C-n>", "<cmd>NeoTreeRevealToggle<CR>", opts)
 
