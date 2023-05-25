@@ -6,7 +6,10 @@ local lazygit_terminal = nil
 
 function _toggle_lazygit()
 	if lazygit_terminal == nil then
-		lazygit_terminal = require("toggleterm.terminal").Terminal:new({ cmd = "lazygit" })
+		lazygit_terminal = require("toggleterm.terminal").Terminal:new({
+			cmd = "gitui",
+			direction = "float",
+		})
 		lazygit_terminal:toggle()
 	else
 		lazygit_terminal:toggle()
@@ -18,7 +21,10 @@ function _toggle_fish()
 		lazygit_terminal:close()
 		lazygit_terminal = nil
 	elseif fish_terminal == nil then
-		fish_terminal = require("toggleterm.terminal").Terminal:new({ cmd = "fish" })
+		fish_terminal = require("toggleterm.terminal").Terminal:new({
+			cmd = "fish",
+			direction = "vertical",
+		})
 		fish_terminal:toggle()
 	else
 		fish_terminal:toggle()
