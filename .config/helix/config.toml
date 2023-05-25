@@ -1,9 +1,0 @@
-theme = "tokyonight"
-
-[editor]
-mouse = false
-
-[editor.cursor-shape]
-insert = "bar"
-select = "block"
-normal = "block"
