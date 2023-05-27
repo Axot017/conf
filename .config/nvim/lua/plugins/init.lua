@@ -1,11 +1,16 @@
 require("lazy").setup({
 	{
-		"nyoom-engineering/oxocarbon.nvim",
+		"Mofiqul/dracula.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.opt.background = "dark"
-			vim.cmd("colorscheme oxocarbon")
+			local dracula = require("dracula")
+			dracula.setup({
+				transparent_bg = true,
+				italic_comment = true,
+			})
+
+			vim.cmd([[colorscheme dracula]])
 		end,
 	},
 	{ "nvim-lua/plenary.nvim" },
