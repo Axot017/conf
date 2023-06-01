@@ -23,7 +23,7 @@ function _toggle_fish()
 	elseif fish_terminal == nil then
 		fish_terminal = require("toggleterm.terminal").Terminal:new({
 			cmd = "fish",
-			direction = "vertical",
+			direction = "horizontal",
 		})
 		fish_terminal:toggle()
 	else
