@@ -10,10 +10,15 @@ local b = null_ls.builtins
 local sources = {
 	b.formatting.stylua,
 	b.formatting.rustfmt,
-	b.formatting.dart_format,
+	b.formatting.dart_format.with({
+		extra_args = { "-l", "120" },
+	}),
 	b.formatting.terraform_fmt,
 	b.formatting.taplo,
 	b.formatting.yamlfmt,
+	b.formatting.gofumpt,
+	b.formatting.goimports_reviser,
+	b.formatting.golines,
 	b.code_actions.gitsigns,
 }
 
