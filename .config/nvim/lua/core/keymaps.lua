@@ -39,6 +39,22 @@ function _reset_fish()
 	_toggle_fish()
 end
 
+function _start_debugger()
+	require("dap").continue()
+	require("dapui").toggle({})
+end
+
+function _stop_debugger()
+	dap = require("dap")
+	ui = require("dapui")
+	dap.clear_breakpoints()
+	ui.toggle({})
+	dap.terminate()
+end
+
+keymap("n", "<leader>ds", "<cmd>lua _start_debugger()<cr>", opts)
+keymap("n", "<leader>de", "<cmd>lua _stop_debugger()<cr>", opts)
+
 keymap("n", "<C-S-t>", "<cmd>lua _reset_fish()<cr>", opts)
 keymap("n", "<C-t>", "<cmd>lua _toggle_fish()<cr>", opts)
 keymap("n", "<leader>lg", "<cmd>lua _toggle_lazygit()<cr>", opts)

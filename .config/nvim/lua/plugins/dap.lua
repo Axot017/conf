@@ -38,6 +38,16 @@ M.config = {
 
 dapui.setup(M.config)
 
+require("dap.ext.vscode").load_launchjs()
+
+dap.adapters.go = {
+	type = "server",
+	port = "${port}",
+	executable = {
+		command = vim.fn.stdpath("data") .. "/mason/bin/dlv",
+		args = { "dap", "-l", "127.0.0.1:${port}" },
+	},
+}
 dap.listeners.after.event_initialized["dapui_config"] = function()
 	dap.set_exception_breakpoints({})
 	dapui.open()
