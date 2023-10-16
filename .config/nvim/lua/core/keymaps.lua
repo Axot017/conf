@@ -22,7 +22,7 @@ function _toggle_fish()
 		lazygit_terminal = nil
 	elseif fish_terminal == nil then
 		fish_terminal = require("toggleterm.terminal").Terminal:new({
-			cmd = "fish",
+			cmd = "zsh",
 			direction = "horizontal",
 		})
 		fish_terminal:toggle()
@@ -58,7 +58,7 @@ keymap("n", "<leader>de", "<cmd>lua _stop_debugger()<cr>", opts)
 keymap("n", "<C-S-t>", "<cmd>lua _reset_fish()<cr>", opts)
 keymap("n", "<C-t>", "<cmd>lua _toggle_fish()<cr>", opts)
 keymap("n", "<leader>lg", "<cmd>lua _toggle_lazygit()<cr>", opts)
-keymap("n", "<C-n>", "<cmd>NeoTreeRevealToggle<CR>", opts)
+keymap("n", "<C-n>", "<cmd>Neotree toggle reveal<CR>", opts)
 
 keymap("n", "<S-h>", "<Cmd>BufferPrevious<CR>", opts)
 keymap("n", "<S-l>", "<Cmd>BufferNext<CR>", opts)

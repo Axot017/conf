@@ -17,9 +17,10 @@ local sources = {
 	b.formatting.taplo,
 	b.formatting.yamlfmt,
 	b.formatting.gofumpt,
-	b.formatting.goimports_reviser,
+	b.formatting.goimports,
 	b.formatting.golines,
 	b.code_actions.gitsigns,
+  b.formatting.sql_formatter,
 }
 
 null_ls.setup({
