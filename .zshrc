@@ -50,6 +50,8 @@ setopt appendhistory
 # /opt/homebrew/share/zsh-syntax-highlighting/highlighters
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/mateuszledwon/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mateuszledwon/google-cloud-sdk/path.zsh.inc'; fi

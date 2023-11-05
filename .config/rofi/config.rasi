@@ -1,0 +1,12 @@
+configuration {
+    font: "JetBrainsMonoNL Nerd Font Mono 12";
+    show-icons: true;
+    display-window: "Window";
+    display-drun: "Search";
+}
+
+@theme "oxide"
+
+listview {
+    lines: 12;
+}

@@ -1,0 +1,63 @@
+{
+    "layer": "top",
+    "modules-left": ["custom/arch", "hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["cpu", "memory", "disk", "pulseaudio", "network", "battery", "clock"],
+    "custom/arch": {
+      "format": "  ",
+      "tooltip": false,
+      "on-click": "rofi -show power-menu -modi power-menu:${HOME}/.config/rofi/bin/rofi-power-menu"
+    },
+    "hyprland/workspaces": {
+      "format": "{name}",
+      "format": "{icon}",
+      "tooltip": false,
+      "all-outputs": true,
+      "format-icons": {
+        "active": "",
+        "default": ""
+      }
+    },
+    "clock": {
+      "format": "<span color='#b4befe'> </span>{:%H:%M}"
+    },
+    "pulseaudio": {
+      "format": "<span color='#b4befe'>{icon}</span> {volume}%",
+      "on-click": "pavucontrol",
+      "format-muted": "󰝟",
+      "tooltip": false,
+      "format-icons": {
+        "headphone": "",
+        "default": ["", "", "󰕾", "󰕾", "󰕾", "", "", ""]
+      },
+      "scroll-step": 1
+    },
+    "network": {
+      "interface": "wlan0",
+      "format": "{ifname}",
+      "format-wifi": "<span color='#b4befe'> </span>{signalStrength}%",
+      "format-ethernet": "{ipaddr}/{cidr} 󱎔 ",
+      "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
+      "on-click": "bash ${HOME}/.config/rofi/bin/rofi-wifi-menu",
+      "tooltip": false
+    },
+    "hyprland/window": {
+        "format": "{}",
+        "separate-outputs": true
+    },
+    "disk": {
+        "interval": 30,
+        "format": "<span color='#b4befe'>󰋊 </span>{percentage_used}%",
+        "path": "/"
+    },
+    "memory": {
+        "interval": 10,
+        "format": "<span color='#b4befe'>󰒋 </span>{percentage}%",
+        "on-click": "alacritty -e htop"
+    },
+    "cpu": {
+        "interval": 10,
+        "format": "<span color='#b4befe'> </span>{usage}%",
+        "on-click": "alacritty -e htop"
+    }
+}
