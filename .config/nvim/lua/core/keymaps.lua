@@ -116,3 +116,6 @@ keymap("n", "N", "Nzz", opts)
 keymap("n", "<ESC>", "<cmd>noh<cr>", opts)
 
 keymap("n", "<leader>tr", "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>", opts)
+
+keymap("n", "<S-p>", '"+p', opts)
+keymap("n", "<S-y>", '"+y', opts)

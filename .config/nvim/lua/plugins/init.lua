@@ -89,31 +89,12 @@ require("lazy").setup({
 			require("plugins.neo-tree")
 		end,
 	},
-	{
-		"numToStr/Comment.nvim",
-		event = "VeryLazy",
-		config = function()
-			require("plugins.comment")
-		end,
-	},
-	{ "akinsho/flutter-tools.nvim" },
 	{ "mfussenegger/nvim-dap" },
 	{
 		"rcarriga/nvim-dap-ui",
 		event = "VeryLazy",
 		config = function()
 			require("plugins.dap")
-		end,
-	},
-	{
-		"akinsho/flutter-tools.nvim",
-		event = "VeryLazy",
-		dependencies = {
-			"neovim/nvim-lspconfig",
-			"rcarriga/nvim-dap-ui",
-		},
-		config = function()
-			require("plugins.flutter-tools")
 		end,
 	},
 	{ "p00f/nvim-ts-rainbow", lazy = false },
@@ -169,11 +150,33 @@ require("lazy").setup({
 		end,
 	},
 	{
-
 		"goolord/alpha-nvim",
 		lazy = false,
 		config = function()
 			require("alpha").setup(require("alpha.themes.dashboard").config)
 		end,
+	},
+	{
+		"tpope/vim-fugitive",
+		event = "VeryLazy",
+	},
+	{
+		"tpope/vim-repeat",
+		event = "VeryLazy",
+	},
+	{
+		"tpope/vim-commentary",
+		event = "VeryLazy",
+	},
+	{
+		"tpope/vim-surround",
+		event = "VeryLazy",
+	},
+	{
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		event = "VeryLazy",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+    },
 	},
 }, require("plugins.lazy"))
