@@ -38,6 +38,7 @@ require("lazy").setup({
 	},
 	{
 		"L3MON4D3/LuaSnip",
+    version = "v2.*",
 	},
 	{
 		"neovim/nvim-lspconfig",
@@ -63,7 +64,7 @@ require("lazy").setup({
 	{ "hrsh7th/cmp-path", event = "VeryLazy" },
 	{ "hrsh7th/cmp-cmdline", event = "VeryLazy" },
 	{
-		"jose-elias-alvarez/null-ls.nvim",
+		"nvimtools/none-ls.nvim",
 		event = "VeryLazy",
 		config = function()
 			require("plugins.null-ls")
@@ -108,7 +109,7 @@ require("lazy").setup({
 	{
 		"lewis6991/gitsigns.nvim",
 		event = "VeryLazy",
-		dependencies = { "jose-elias-alvarez/null-ls.nvim" },
+		dependencies = { "nvimtools/none-ls.nvim" },
 		config = function()
 			require("plugins.gitsigns")
 		end,
@@ -165,8 +166,11 @@ require("lazy").setup({
 		event = "VeryLazy",
 	},
 	{
-		"tpope/vim-commentary",
+		"numToStr/Comment.nvim",
 		event = "VeryLazy",
+    config = function()
+      require("Comment").setup()
+    end,
 	},
 	{
 		"tpope/vim-surround",

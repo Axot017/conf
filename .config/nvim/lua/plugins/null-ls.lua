@@ -10,6 +10,7 @@ local b = null_ls.builtins
 local sources = {
 	b.formatting.stylua,
 	b.formatting.rustfmt,
+	b.formatting.ocamlformat,
 	b.formatting.dart_format.with({
 		extra_args = { "-l", "120" },
 	}),

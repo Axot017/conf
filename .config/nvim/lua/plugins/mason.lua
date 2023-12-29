@@ -18,7 +18,7 @@ end
 
 mason.setup()
 mason_lspconfig.setup {
-  automatic_installation = true
+  automatic_installation = false
 }
 
 local on_attach = require("plugins.lsp").on_attach
@@ -31,4 +31,9 @@ mason_lspconfig.setup_handlers {
         capabilities = capabilities,
       }
     end,
+}
+
+lspconfig.ocamllsp.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
 }
